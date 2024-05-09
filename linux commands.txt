@@ -1,0 +1,122 @@
+# cat (to open file)
+  cat > <filename> (override data)
+  cat >> <filename> (concatenate data)
+
+# ls  (list)
+
+# tail (to open last log files ,by default it open  last 10lines)
+  tail -f <filename> (to check running logs i.e latest logs printed)
+  tail -n 100 <filename> (to open last 100 log files)
+
+# head (to open first log files, by default it open first 10 lines)
+  head -f <filename> (to check running logs i.e latest logs printed)
+  head -n 100 <filename> (to open first 100 log files)  
+
+# htop (to check pid,cpu and memory of running processes in better way)
+  pid= process id
+  top (is also used to check cpu and memory of process)
+
+# free command (to check system memory )
+  free -g (to show free memory in gb)
+  free -m (to show free memory in mb)
+
+# less (to display file item on screen)
+  same as cat command but cat command show all contents of a file immediate
+
+# nslookup (to check dns ip) :- e.g nslookup www.google.com show the end points of dns
+
+# to edit file use (vi ,vim ,nano)
+
+# grep (to grep any particular pattern from file or process)
+  ps -ef | grep <process id>    (ps- process status)
+tail -n 100 <filename> | grep -i "pattern"
+eg tail -n 100 system | grep -i "target"
+
+# to change permission of a file 
+  use chmod command
+  syntax chmod 777 filename
+  chmod 777 -R directory
+  4 - read
+  2- write
+  1 - execute
+
+# rm -rf <directoryname> :- forcely delete directly if it's not empty
+
+# instance(server) is having public ip and private ip 
+  public ip changes every time when we stop and start instance 
+  but instance ip does not changes if it is having elastic ip or we reboot the instance
+
+# secutity groups (where ports are whitelisted )
+
+# curl ifconfig.me :- give me my ip address means curl fetching data from website then show data on terminal
+
+# ssh -i <pemfile> user@ip  (to login any cloud server from local using pem file) (use if we have pemfile)
+  pem file is a secret file to login cloud server
+  ssh user@ip (to access server on the basis of user which is created in that particular server)(use if we have only ip address)
+
+# To check open ports 
+  netstat -tulnp 
+
+# history -c :- for delete history
+
+# telnet 128.38.0.1 89 :- (check 89 port number is connect with this server ip adress or not)
+
+note:- 1) search data in file after vi,vim,nano  
+       2) how we can fetch ip address of any server in linux (use nslookup dnsname)
+
+# Wget <downloadlink of website> :- use for downloading any files from their download link
+
+# df -h :- Disk command use for checking file system space(hardisk) 
+
+
+
+
+ls 
+ls -lrth
+cd ..
+mkdir <dir name>
+ls | grep <searchname>
+cd <dirName>
+touch
+cat > filename
+cat >> filename
+vim filename
+less <filename>
+rm <filename>
+rmdir <dirName>
+rm -rf <dirName> :- remove if directory is not empty
+mkdir <dir1> <dir2>
+pwd
+cp <file/dir> <destinationpath>
+mv <file/dir> <destinationpath>
+chmod 777 <file/dirName>
+clear
+history
+history -c
+head <filename>
+head -n 7 <filename>
+tail <filename>
+tail -n 7 <filename>
+htop
+ps -ef | grep <processId>
+free -m 
+free -g
+ls | wc -l
+curl ifconfig.me
+nslookup <siteurl>
+telnet <ipadress> <portNo>
+df -h :- Disk
+sudo su
+cd ../..
+cat /etc/passwd
+vim file1.txt  ->  :/<keywordName> (search any element)  and then press enter button and then for next next keyword press "n"
+mv oldname.txt newname.txt -> update name of the file
+cp oldname.txt newname.txt -> dulplicate file with updated name
+cat /etc/os-release -> check version of unbunto in linux
+# user in root :- chown <username> <filename> -> change the owner of the file like :- chown mohit file1.txt (but owner must be have write permission )
+# useradd <username> -> use for creating a new user
+  passwd -d <username> -> use for key securing means we need a key for accesing this user so, using this key for securing purpose in the companies
+# user can't give not ownership to another user but if user want to change ownership then user will use below command
+  sudo chown <username> <filename> :- (press enter)
+  then write password then press enter after the ownership of the file will be change from the user end. 
+
